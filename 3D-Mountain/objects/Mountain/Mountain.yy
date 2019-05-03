@@ -1,10 +1,29 @@
 {
-    "id": "16571af3-4fd0-4dd6-adec-78ea2b8f0b27",
+    "id": "9e0496e4-2ea2-4cde-ac32-118cf3042cf1",
     "modelName": "GMObject",
     "mvc": "1.0",
     "name": "Mountain",
     "eventList": [
-        
+        {
+            "id": "dbc190d8-33f4-41ec-b47f-918cbafc536c",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 8,
+            "m_owner": "9e0496e4-2ea2-4cde-ac32-118cf3042cf1"
+        },
+        {
+            "id": "346ab794-7c86-4d70-b23c-f3369e875854",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 0,
+            "m_owner": "9e0496e4-2ea2-4cde-ac32-118cf3042cf1"
+        }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,

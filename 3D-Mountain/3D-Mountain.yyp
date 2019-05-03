@@ -47,11 +47,11 @@
             }
         },
         {
-            "Key": "16571af3-4fd0-4dd6-adec-78ea2b8f0b27",
+            "Key": "195a3377-7d94-4816-a750-11e1fbe710bd",
             "Value": {
-                "id": "95fe2f34-3052-4da0-8a8a-825e8b9b2691",
-                "resourcePath": "objects\\Mountain\\Mountain.yy",
-                "resourceType": "GMObject"
+                "id": "076444f8-4279-4695-b608-613dcdb1d1ea",
+                "resourcePath": "scripts\\rotateX\\rotateX.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -146,7 +146,7 @@
             "Key": "9e0496e4-2ea2-4cde-ac32-118cf3042cf1",
             "Value": {
                 "id": "87c912ee-8f82-4c41-8cd4-be15a0a2b9ff",
-                "resourcePath": "objects\\Triangle\\Triangle.yy",
+                "resourcePath": "objects\\Mountain\\Mountain.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -223,6 +223,14 @@
             }
         },
         {
+            "Key": "e9bc041d-71f5-4236-9f5e-6dac7f8622a7",
+            "Value": {
+                "id": "9295041a-17f1-4cdd-a6ed-8c986315ae5a",
+                "resourcePath": "scripts\\rotateZ\\rotateZ.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "f418569b-3bdd-4706-a0e4-364317f54032",
             "Value": {
                 "id": "3155b504-7e18-4cf3-8998-bb65568a1040",
@@ -233,7 +241,9 @@
     ],
     "script_order": [
         "10c17817-53e6-488c-a83b-5f4acf7c7857",
-        "4d5c603f-cf5d-4ff6-96ee-f353857923f7"
+        "195a3377-7d94-4816-a750-11e1fbe710bd",
+        "4d5c603f-cf5d-4ff6-96ee-f353857923f7",
+        "e9bc041d-71f5-4236-9f5e-6dac7f8622a7"
     ],
     "tutorial": ""
 }
