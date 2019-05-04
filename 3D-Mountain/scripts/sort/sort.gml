@@ -4,13 +4,22 @@ colors = argument[1];
 depths = ds_list_create();
 
 for(i = 0; i < array_length_1d(model); i++) {
-	triangle = model[i];
-	d = triangle[2] + triangle[5] + triangle[8];
-	var curr = depths[|0];
-	for(j = -1; (j < ds_list_size(depths) - 1) && (curr[0] < d); j++){
-		curr = depths[|j+1]
+	var triangle = model[i];
+	var d = triangle[2] + triangle[5] + triangle[8];
+	var found = false;
+	for(j = 0; j < ds_list_size(depths) && !found; j++){
+		var curr_depth = depths[|j];
+		if(curr_depth[0] > d) {
+			found = true;
+			j--;
+		}
 	}
-	ds_list_insert(depths, j+1, [d,i]);
+	ds_list_insert(depths, j, [d,i]);
+}
+
+show_debug_message("MODEL:");
+for(i = 0; i < array_length_1d(model); i++) {
+	show_debug_message(depths[|i]);
 }
 
 new_colors = colors;
