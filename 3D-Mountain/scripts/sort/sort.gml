@@ -30,7 +30,7 @@ for(i=0;i<ds_list_size(depths);i++) {
 	
 	var curr_tr = curr_depth[1];
 	
-	new_colors[i] = colors[curr_tr];
+	new_colors[i] = colors[curr_tr%array_length_1d(colors)];
 	new_model_tr = []
 	for(j=0;j<3;j++) {
 		var curr_model_tr = model[curr_tr];
