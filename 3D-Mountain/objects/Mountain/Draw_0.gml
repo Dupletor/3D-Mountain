@@ -17,6 +17,16 @@ vertex_begin(v_buff, global.my_format);
 old_model = model;
 old_colors = colors;
 
+new_model = [];
+for(m = 0; m < array_length_1d(model); m++) {
+	triangle = model[m];
+	if ((triangle[0] + translation > 0	|| triangle[3] + translation > 0		|| triangle[6] + translation > 0) && 
+		(triangle[0] + translation < 1400 || triangle[3] + translation < 1400	|| triangle[6] + translation < 1400)) {
+		new_model[array_length_1d(new_model)] = model[m];	
+	}
+}
+model = new_model;
+
 for(m = 0; m < array_length_1d(model); m++) {
 	//model[m] = rotateY(model[m], 25);
 	model[m] = rotateX(model[m], angle);
