@@ -18,14 +18,13 @@ old_model = model;
 old_colors = colors;
 
 for(m = 0; m < array_length_1d(model); m++) {
-	//model[m] = rotateY(model[m], angle);
+	//model[m] = rotateY(model[m], 25);
 	model[m] = rotateX(model[m], angle);
 	model[m] = rotateZ(model[m], 90);
 }
-
-angle += 2;
-
+//angle += 2;
 sort(model, colors);
+
 
 for(i = 0; i < array_length_1d(model); i++) {
 	var curr_tr = model[i];

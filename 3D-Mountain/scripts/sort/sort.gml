@@ -17,11 +17,6 @@ for(i = 0; i < array_length_1d(model); i++) {
 	ds_list_insert(depths, j, [d,i]);
 }
 
-show_debug_message("MODEL:");
-for(i = 0; i < array_length_1d(model); i++) {
-	show_debug_message(depths[|i]);
-}
-
 new_colors = colors;
 new_model = [];
 

@@ -6,7 +6,9 @@ vector = argument[0];
 for(i = 0; i < 3; i++) {
 	vector[3*i+1] -= center[1];
 	vector[3*i+2] -= center[2];
+	vector[3*i+0] += translation;
 }
+
 
 vector = multiply_matrixes(
 	vector[0],
