@@ -1,12 +1,20 @@
 if(keyboard_check(vk_left)) {
-	angle -= 2;
+	angle ++;
 }
-if(keyboard_check(vk_right)) {
-	angle += 2;
+if(keyboard_check(vk_right) && global.player_in_position && translation > -2450) {
+	angle --;
+	translation--;
 }
-if(keyboard_check(vk_up)) {	
-	translation += 2;
+
+if(keyboard_check(vk_up) && translation < 0) {	
+	translation++;
 }
-if(keyboard_check(vk_down)) {
-	translation -= 2;
+if(keyboard_check(vk_down) && translation > -2450) {
+	translation--;
+	show_debug_message(translation);
 }
+
+if(translation <= -2450) {
+	Player.done = true;
+}
+

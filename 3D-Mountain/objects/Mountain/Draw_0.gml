@@ -52,6 +52,8 @@ colors = old_colors;
 vertex_end(v_buff);
 
 vertex_submit(v_buff, pr_trianglelist, -1);
+if(translation < -800)
+	effect_create_above(ef_snow, 0, 0, (-800-translation)/800, make_color_hsv(0,0,(-800-translation)/4));
 
 
 model = old_model;
