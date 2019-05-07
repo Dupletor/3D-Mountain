@@ -20,7 +20,7 @@ old_colors = colors;
 new_model = [];
 for(m = 0; m < array_length_1d(model); m++) {
 	triangle = model[m];
-	if ((triangle[0] + translation > 0	|| triangle[3] + translation > 0		|| triangle[6] + translation > 0) && 
+	if ((triangle[0] + translation > 450	|| triangle[3] + translation > 450		|| triangle[6] + translation > 450) && 
 		(triangle[0] + translation < 1400 || triangle[3] + translation < 1400	|| triangle[6] + translation < 1400)) {
 		new_model[array_length_1d(new_model)] = model[m];	
 	}
