@@ -31,6 +31,14 @@
     },
     "resources": [
         {
+            "Key": "03a4d8c4-1371-47c9-83e0-59d58af30007",
+            "Value": {
+                "id": "cb6ef040-69b5-4151-aa34-af12bc4617ce",
+                "resourcePath": "scripts\\multiply_vector_to_matrix\\multiply_vector_to_matrix.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "0a657299-36c0-4dde-9286-986b645dcfe5",
             "Value": {
                 "id": "a8e0a796-3fdd-4075-80ba-dd591e3d83d0",
@@ -270,7 +278,8 @@
         "e9bc041d-71f5-4236-9f5e-6dac7f8622a7",
         "fc8b5a80-f66b-48b6-8a76-0c60052ee1a6",
         "b6dc6100-e7ca-4dcc-b986-1f1034bd9324",
-        "489d1b10-8ade-430d-80c0-7fe1bd3a3c7d"
+        "489d1b10-8ade-430d-80c0-7fe1bd3a3c7d",
+        "03a4d8c4-1371-47c9-83e0-59d58af30007"
     ],
     "tutorial": ""
 }

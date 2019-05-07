@@ -1,8 +1,6 @@
 
 vector = argument[0];
 
-
-
 for(i = 0; i < 3; i++) {
 	vector[3*i+0] -= center[0];
 	vector[3*i+2] -= center[2];

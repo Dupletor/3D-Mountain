@@ -44,26 +44,3 @@ colors = new_colors;
 
 model = new_model;
 ds_list_destroy(depths);
-
-/*
-
-tr1 = [[ft[0],ft[1],ft[2]],[ft[3],ft[4],ft[5]],[ft[6],ft[7],ft[8]]];
-tr2 = [[st[0],st[1],st[2]],[st[3],st[4],st[5]],[st[6],st[7],st[8]]];
-
-if(ft[2]+ft[5]+ft[8] > st[2]+st[5]+st[8]) {
-	tr = [tr2, tr1];
-	colors = [c_gray,c_white];
-} else {
-	tr = [tr1, tr2];
-	colors = [c_white,c_gray];
-}
-
-
-model = tr;
-
-
-
-show_debug_message("MODEL 2:");
-show_debug_message(model);
-
-*/

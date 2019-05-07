@@ -12,15 +12,13 @@ global.my_format = vertex_format_end();
 
 */
 
-
-
 v_buff = vertex_create_buffer();
 vertex_begin(v_buff, global.my_format);
 old_model = model;
 old_colors = colors;
 
 for(m = 0; m < array_length_1d(model); m++) {
-	//model[m] = rotateY(model[m], 10);
+	//model[m] = rotateY(model[m], angle);
 	model[m] = rotateX(model[m], angle);
 	model[m] = rotateZ(model[m], 90);
 }
