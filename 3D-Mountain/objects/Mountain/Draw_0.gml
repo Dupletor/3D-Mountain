@@ -12,6 +12,8 @@ global.my_format = vertex_format_end();
 
 */
 
+
+
 v_buff = vertex_create_buffer();
 vertex_begin(v_buff, global.my_format);
 old_model = model;
@@ -19,6 +21,7 @@ old_colors = colors;
 
 new_model = [];
 for(m = 0; m < array_length_1d(model); m++) {
+<<<<<<< HEAD
 	triangle = model[m];
 	if ((triangle[0] + translation > 450	|| triangle[3] + translation > 450		|| triangle[6] + translation > 450) && 
 		(triangle[0] + translation < 1400 || triangle[3] + translation < 1400	|| triangle[6] + translation < 1400)) {
@@ -29,6 +32,9 @@ model = new_model;
 
 for(m = 0; m < array_length_1d(model); m++) {
 	//model[m] = rotateY(model[m], 25);
+=======
+	//model[m] = rotateY(model[m], 10);
+>>>>>>> parent of 70975b2... stable cube creator
 	model[m] = rotateX(model[m], angle);
 	model[m] = rotateZ(model[m], 90);
 }
