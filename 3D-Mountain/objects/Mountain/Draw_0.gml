@@ -31,7 +31,11 @@ for(m = 0; m < array_length_1d(model); m++) {
 model = new_model;
 
 for(m = 0; m < array_length_1d(model); m++) {
+<<<<<<< HEAD
 	//model[m] = rotateY(model[m], 25);
+=======
+	//model[m] = rotateY(model[m], 10);
+>>>>>>> parent of 70975b2... stable cube creator
 =======
 	//model[m] = rotateY(model[m], 10);
 >>>>>>> parent of 70975b2... stable cube creator
