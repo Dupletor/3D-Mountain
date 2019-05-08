@@ -35,12 +35,14 @@ for(m = 0; m < array_length_1d(model); m++) {
 //angle += 2;
 sort(model, colors);
 
-
 for(i = 0; i < array_length_1d(model); i++) {
 	var curr_tr = model[i];
 	for(j = 0; j < 3; j++) {
 		coor = curr_tr[j];
-		vertex_colour(v_buff, colors[i], 1);
+		if(translation < -1850)
+			vertex_colour(v_buff, merge_color(colors[i], c_white, (-1850 - translation)/700),1);
+		else
+			vertex_colour(v_buff, colors[i],1);
 		vertex_position_3d(v_buff, coor[0],coor[1],coor[2]);
 		
 	}

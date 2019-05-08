@@ -11,7 +11,7 @@ if(keyboard_check(vk_up) && translation < 0) {
 }
 if(keyboard_check(vk_down) && translation > -2450) {
 	translation--;
-	show_debug_message(translation);
+	//show_debug_message(translation);
 }
 
 if(translation <= -2450) {
