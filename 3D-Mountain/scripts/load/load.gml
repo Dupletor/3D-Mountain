@@ -15,7 +15,7 @@ var circles = [];
 for(i=0;i<array_length_1d(radius);i++) {
 	var nextdot = [];
 	for(j=0;j<triangles_per_circle;j++) {
-		nextdot[j] = [center[0]+dx*i,center[1]+radius[i]*dcos(360.*(j)/triangles_per_circle),center[2]+radius[i]*dsin(360.*(j)/triangles_per_circle)];
+		nextdot[j] = [dx*i,radius[i]*dcos(360.*(j)/triangles_per_circle),radius[i]*dsin(360.*(j)/triangles_per_circle)];
 	}
 	circles[i] = nextdot;
 }
