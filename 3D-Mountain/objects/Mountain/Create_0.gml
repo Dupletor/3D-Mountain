@@ -1,6 +1,6 @@
 angle = 0;
 translation = 0;
-triangles_per_circle = 6;
+triangles_per_circle = 24;
 global.player_in_position = false;
 
 colors = [make_color_hsv(0,0,118),make_color_hsv(0,0,112),
