@@ -6,6 +6,8 @@ for(i = 0; i < 3; i++) {
 	vector[3*i+1] -= center[1];
 }
 
+
+
 vector = multiply_matrixes(
 	vector[0],
 	vector[1],
@@ -29,9 +31,11 @@ vector = multiply_matrixes(
 );
 
 
+
 for(i = 0; i < 3; i++) {
 	vector[3*i+0] += center[0];
 	vector[3*i+1] += center[1];
 }
+
 
 return vector;

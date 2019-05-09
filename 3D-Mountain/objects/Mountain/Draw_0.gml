@@ -20,28 +20,26 @@ old_model = model;
 old_colors = colors;
 
 new_model = [];
+
 for(m = 0; m < array_length_1d(model); m++) {
-<<<<<<< HEAD
-	triangle = model[m];
-	if ((triangle[0] + translation > 450	|| triangle[3] + translation > 450		|| triangle[6] + translation > 450) && 
-		(triangle[0] + translation < 1400 || triangle[3] + translation < 1400	|| triangle[6] + translation < 1400)) {
+	var triangle = model[m];
+	if (
+		(triangle[0] + translation > 450	|| triangle[3] + translation > 450		|| triangle[6] + translation > 450) && 
+		(triangle[0] + translation < 1400 || triangle[3] + translation < 1400	|| triangle[6] + translation < 1400)
+		) {
 		new_model[array_length_1d(new_model)] = model[m];	
 	}
 }
+
 model = new_model;
 
+
+
 for(m = 0; m < array_length_1d(model); m++) {
-<<<<<<< HEAD
-	//model[m] = rotateY(model[m], 25);
-=======
-	//model[m] = rotateY(model[m], 10);
->>>>>>> parent of 70975b2... stable cube creator
-=======
-	//model[m] = rotateY(model[m], 10);
->>>>>>> parent of 70975b2... stable cube creator
 	model[m] = rotateX(model[m], angle);
 	model[m] = rotateZ(model[m], 90);
 }
+
 //angle += 2;
 sort(model, colors);
 
@@ -66,6 +64,7 @@ vertex_end(v_buff);
 vertex_submit(v_buff, pr_trianglelist, -1);
 if(translation < -800)
 	effect_create_above(ef_snow, 0, 0, (-800-translation)/800, make_color_hsv(0,0,(-800-translation)/4));
+
 
 
 model = old_model;
