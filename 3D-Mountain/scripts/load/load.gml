@@ -14,8 +14,11 @@ var circles = [];
 
 for(i=0;i<array_length_1d(radius);i++) {
 	var nextdot = [];
+	var prev_random = random_range(-10,10)/35;
 	for(j=0;j<triangles_per_circle;j++) {
-		nextdot[j] = [dx*i,radius[i]*dcos(360.*(j)/triangles_per_circle),radius[i]*dsin(360.*(j)/triangles_per_circle)];
+		var next_random = random_range(-10,10)/35;
+		nextdot[j] = [dx*i,radius[i]*dcos(360.*(j+i/2+((next_random+prev_random)/2))/triangles_per_circle),radius[i]*dsin(360.*(j+i/2+((next_random+prev_random)/2))/triangles_per_circle)];
+		prev_random = next_random;
 	}
 	circles[i] = nextdot;
 }
