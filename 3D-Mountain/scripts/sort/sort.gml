@@ -17,7 +17,7 @@ for(i = 0; i < array_length_1d(t_model); i+=3) {
 ds_grid_sort(depths, 1, true);
 
 new_colors = colors;
-new_model = [];
+var new_model = [];
 for(i=0;i<ds_grid_height(depths)*3;i+=3) {
 	var curr_tr = depths[# 0, i/3];
 	new_colors[i] = colors[curr_tr%array_length_1d(colors)];

@@ -18,18 +18,6 @@ v_buff = vertex_create_buffer();
 vertex_begin(v_buff, global.my_format);
 old_colors = colors;
 
-new_model = [];
-
-for(m = 0; m < array_length_1d(model); m++) {
-	var triangle = model[m];
-	if (
-		(triangle[0] + translation > 300	|| triangle[3] + translation > 300		|| triangle[6] + translation > 300) && 
-		(triangle[0] + translation < 1350 || triangle[3] + translation < 1350	|| triangle[6] + translation < 1350) 
-		) {
-		new_model[array_length_1d(new_model)] = model[m];	
-	}
-}
-
 t_matrix = matrix_build(500, 1100 -translation, 0, angle, 1, 90, 1, 1, 1);
 
 t_model = [];
@@ -44,8 +32,8 @@ sort(t_model, colors);
 
 for(i = 0; i < array_length_1d(t_model); i++) {
 	var curr_tr = t_model[i];
-	if(translation < -1850)
-		vertex_colour(v_buff, merge_color(colors[i%array_length_1d(colors)], c_white, (-1850 - translation)/700),1);
+	if(translation < -1150)
+		vertex_colour(v_buff, merge_color(colors[i%array_length_1d(colors)], c_white, (-1150 - translation)/1400),1);
 	else
 		vertex_colour(v_buff, colors[i%array_length_1d(colors)],1);
 	vertex_position_3d(v_buff, curr_tr[0],curr_tr[1],curr_tr[2]);
