@@ -1,71 +1,60 @@
-
-var dx = 100;
-
 model = [];
-file = file_text_open_read("mountainmodel.txt");
+file = file_text_open_read("mountainmodel2.txt");
 
-var radius = [];
+var polygons = [];
 
 while (!file_text_eof(file)) {
-	radius[array_length_1d(radius)] = file_text_read_real(file);
-}
+	var next_polygon = [];
+	var next_x = file_text_read_real(file);
 
-var circles = [];
-
-for(i=0;i<array_length_1d(radius);i++) {
-	var nextdot = [];
-	var prev_random = random_range(-10,10)/35;
-	for(j=0;j<triangles_per_circle;j++) {
-		var next_random = random_range(-10,10)/35;
-		nextdot[j] = [dx*i,radius[i]*dcos(360.*(j+i/2+((next_random+prev_random)/2))/triangles_per_circle),radius[i]*dsin(360.*(j+i/2+((next_random+prev_random)/2))/triangles_per_circle)];
-		prev_random = next_random;
+	for(var i = file_text_read_real(file); (i > 0); i--) {
+		var next_y = file_text_read_real(file);
+		var next_z = file_text_read_real(file);
+		next_polygon[array_length_1d(next_polygon)] = [next_x, next_y, next_z];
 	}
-	circles[i] = nextdot;
-}
-//circles  = [[[100,100,100],[100,200,100],[100,200,200],[100,100,200]],
-//		[[200,75,75],[200,225,75],[200,225,225],[200,75,225]]];
-
-for(c=1;c<array_length_1d(circles);c++) {
-	var first_circle = circles[c-1];
-	var next_circle = circles[c];
-	first_circle[array_length_1d(first_circle)] = first_circle[0];
-	next_circle[array_length_1d(next_circle)] = next_circle[0];
-	posdown = 0;
-	posup = 0;
-
-	for(t=0;t<array_length_1d(first_circle)-1;t++) {
-		var first_triangle = [first_circle[posdown],first_circle[posdown+1],next_circle[posup]];
-		var second_triangle= [next_circle[posup],next_circle[posup+1],first_circle[posdown+1]];
-		posdown++;
-		posup++;
-		
-		
-		next1 = [];
-		next2 = [];
-		for(i=0;i<3;i++) {
-			for(j=0;j<3;j++) {
-				next_dot1 = first_triangle[i];
-				next_dot2 = second_triangle[i];
-				next1 [3*i+j] = next_dot1[j];
-				next2 [3*i+j] = next_dot2[j];
-			}
-		}
-		
-		model[array_length_1d(model)] = next1;
-		model[array_length_1d(model)] = next2;
-	}
-	first_circle = next_circle;
-}
-	
-
-/*
-	var next = [];
-	for(i = 0; i < 9; i++) {
-		next[i] = file_text_read_real(file);
-	}
-	model[array_length_1d(model)] = next;
+	polygons[array_length_1d(polygons)] = next_polygon;
 	file_text_readln(file);
 }
-*/
 
+show_debug_message(polygons);
+
+//show_debug_message(polygons[0]);
+//colors = [c_red,c_blue,c_lime,c_yellow,c_orange, c_purple, c_aqua, c_olive];
+
+for(var c=1;c<array_length_1d(polygons);c++) {
+	//show_debug_message(polygons[c]);
+	var bigger = BiggerArray(polygons[c-1],polygons[c]);
+	var smaller = SmallerArray(polygons[c-1],polygons[c]);
+	var MIN = min(array_length_1d(bigger), array_length_1d(smaller));
+	var MAX = max(array_length_1d(bigger), array_length_1d(smaller));
+	bigger[array_length_1d(bigger)] = bigger[0];
+	smaller[array_length_1d(smaller)] = smaller[0];
+	var R = MAX%MIN;
+	var cont = 0;
+	var Q = floor(MAX/MIN);
+	var next_tr = [];
+	for(var p = 0; p < MIN; p++) {
+		for(var q = 0; q < Q; q++) {
+			next_tr[array_length_1d(next_tr)] = [bigger[cont+p*Q+q],smaller[p],bigger[cont+p*Q+q+1]];
+		}
+		
+		if(cont < R) {
+			next_tr[array_length_1d(next_tr)] = [bigger[cont+p*Q+q],smaller[p],bigger[cont+p*Q+q+1]];
+			cont++;
+		}
+		
+		//show_debug_message(next_tr);
+		next_tr[array_length_1d(next_tr)] = [bigger[cont+p*Q+q],smaller[p],smaller[p+1]];
+	}
+	for(var t = 0; t < array_length_1d(next_tr); t++) {
+		var tr = next_tr[t];
+		var dot1 = tr[0];
+		var dot2 = tr[1];
+		var dot3 = tr[2];
+		model[array_length_1d(model)] = [dot1[0],dot1[1],dot1[2],dot2[0],dot2[1],dot2[2],dot3[0],dot3[1],dot3[2]];
+	}
+}
+
+show_debug_message(model);
+//show_debug_message(a);
 file_text_close(file);
