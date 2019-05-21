@@ -16,7 +16,7 @@ v_buff = vertex_create_buffer();
 vertex_begin(v_buff, global.my_format);
 old_colors = colors;
 
-t_matrix = matrix_build(center[0], center[1] -translation, center[2], (mouse_y - 300)/2, angle + (mouse_x - 300)/2, 0, 1, 1, 1);//, , 0, 1, 1, 1);
+t_matrix = matrix_build(center[0], center[1] -translation, center[2], (mouse_y - 300)/2, angle + (mouse_x - 300)/2, 0, 1, 1, 1);
 
 t_model = [];
 for(m = 0; m < array_length_1d(new_model); m++) {

@@ -1,5 +1,5 @@
 model = [];
-file = file_text_open_read("mountainmodel2.txt");
+file = file_text_open_read("mountainmodel.txt");
 
 var polygons = [];
 

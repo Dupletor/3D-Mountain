@@ -8,7 +8,7 @@ for(i = 0; i < array_length_1d(t_model); i+=3) {
 	var triangle = [t_model[i],t_model[i+1],t_model[i+2]];
 	for(k = 0;k < 3; k++ ) {
 		dot = triangle[k];
-		d += dot[2];
+		d += (dot[2]);
 	}
 	ds_grid_set(depths, 0, i/3, i);
 	ds_grid_set(depths, 1, i/3, d);
