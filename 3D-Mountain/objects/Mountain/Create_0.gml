@@ -1,6 +1,5 @@
 angle = 0;
 translation = 0;
-triangles_per_circle = 18;
 global.player_in_position = false;
 
 colors = [c_red,c_blue,c_lime,c_yellow,c_orange, c_purple, c_aqua, c_olive];
@@ -12,7 +11,8 @@ colors = [c_red,c_blue,c_lime,c_yellow,c_orange, c_purple, c_aqua, c_olive];
 		  make_color_hsv(0,0,116),make_color_hsv(0,0,121),
 		  make_color_hsv(0,0,117),make_color_hsv(0,0,124)];
 */
-center = [0,700,0];
+center = [500,600,0];
+
 
 load();
 

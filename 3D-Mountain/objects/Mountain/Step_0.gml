@@ -6,7 +6,7 @@ if(keyboard_check(vk_right) && global.player_in_position && translation > -2000)
 	translation--;
 }
 
-if(keyboard_check(vk_up) && translation < 0) {	
+if(keyboard_check(vk_up) && translation < 2000) {	
 	translation++;
 }
 if(keyboard_check(vk_down) && translation > -2000) {

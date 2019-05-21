@@ -12,13 +12,11 @@ global.my_format = vertex_format_end();
 
 */
 
-
-
 v_buff = vertex_create_buffer();
 vertex_begin(v_buff, global.my_format);
 old_colors = colors;
 
-t_matrix = matrix_build(500, 1100 -translation, 0, angle, 15, 90, 1, 1, 1);
+t_matrix = matrix_build(center[0], center[1] -translation, center[2], (mouse_y - 300)/2, angle + (mouse_x - 300)/2, 0, 1, 1, 1);//, , 0, 1, 1, 1);
 
 t_model = [];
 for(m = 0; m < array_length_1d(new_model); m++) {

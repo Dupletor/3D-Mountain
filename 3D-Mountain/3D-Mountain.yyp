@@ -159,14 +159,6 @@
             }
         },
         {
-            "Key": "82100715-9d96-4582-89da-f32762422466",
-            "Value": {
-                "id": "e4db549f-612d-4d9f-9612-602f334b6db5",
-                "resourcePath": "objects\\screen_controller\\screen_controller.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "85465aca-779b-4abe-82a7-4e147b10f920",
             "Value": {
                 "id": "c66670c4-d9c5-4708-b31b-0b3504dd1d79",
