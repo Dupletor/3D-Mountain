@@ -1,5 +1,5 @@
 
-file = file_text_open_write("cubemodel.txt");
+file = file_text_open_write("model.txt");
 for(i = 0; i < array_length_1d(model); i++) {
 	for(j=0; j < 9; j++) {
 		var n = model[i];

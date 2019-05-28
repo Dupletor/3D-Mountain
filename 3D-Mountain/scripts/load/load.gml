@@ -16,11 +16,6 @@ while (!file_text_eof(file)) {
 	file_text_readln(file);
 }
 
-show_debug_message(polygons);
-
-//show_debug_message(polygons[0]);
-//colors = [c_red,c_blue,c_lime,c_yellow,c_orange, c_purple, c_aqua, c_olive];
-
 for(var c=1;c<array_length_1d(polygons);c++) {
 	var bigger = BiggerArray(polygons[c-1],polygons[c]);
 	var smaller = SmallerArray(polygons[c-1],polygons[c]);
@@ -53,6 +48,6 @@ for(var c=1;c<array_length_1d(polygons);c++) {
 	}
 }
 
-show_debug_message(model);
-//show_debug_message(a);
 file_text_close(file);
+
+insert("model.txt");
