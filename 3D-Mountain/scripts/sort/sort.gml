@@ -2,13 +2,12 @@ t_model = argument[0];
 colors = argument[1];
 
 depths = ds_grid_create(2,array_length_1d(t_model)/3);
-
 for(i = 0; i < array_length_1d(t_model); i+=3) {
 	var d = 0;
 	var triangle = [t_model[i],t_model[i+1],t_model[i+2]];
 	for(k = 0;k < 3; k++ ) {
 		dot = triangle[k];
-		d += (dot[2]);
+		d += (dot[2]) - sign(x_angle)*10000*new_model_h[i/3];
 	}
 	ds_grid_set(depths, 0, i/3, i);
 	ds_grid_set(depths, 1, i/3, d);

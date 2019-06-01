@@ -45,9 +45,11 @@ for(var c=1;c<array_length_1d(polygons);c++) {
 		var dot2 = tr[1];
 		var dot3 = tr[2];
 		model[array_length_1d(model)] = [dot1[0],dot1[1],dot1[2],dot2[0],dot2[1],dot2[2],dot3[0],dot3[1],dot3[2]];
+		model_h[array_length_1d(model_h)] = (max(dot1[1],dot2[1],dot3[1]) + min(dot1[1],dot2[1],dot3[1]));
 	}
 }
-
 file_text_close(file);
 
 insert("model.txt");
+show_debug_message(model);
+show_debug_message(model_h);

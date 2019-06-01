@@ -2,6 +2,7 @@ alarm[0] = 30;
 
 
 new_model = [];
+new_model_h = [];
 
 for(m = 0; m < array_length_1d(model); m++) {
 	var triangle = model[m];
@@ -12,5 +13,7 @@ for(m = 0; m < array_length_1d(model); m++) {
 		(triangle[1] - translation + center[1] < max_y + 50	|| triangle[4] - translation + center[1] < max_y + 50	|| triangle[7] - translation + center[1] < max_y + 50) 
 		) {
 		new_model[array_length_1d(new_model)] = model[m];	
+		new_model_h[array_length_1d(new_model_h)] = model_h[m];
 	}
 }
+

@@ -1,1 +1,2 @@
 done = false;
+jumping = false;
