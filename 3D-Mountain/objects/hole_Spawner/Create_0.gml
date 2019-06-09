@@ -1,3 +1,4 @@
 
-inispd = -1;
+inispd = 1;
 iniy = y;
+spawned = false;

@@ -15,8 +15,8 @@ global.my_format = vertex_format_end();
 v_buff = vertex_create_buffer();
 vertex_begin(v_buff, global.my_format);
 old_colors = colors;
-x_angle = (mouse_y - 300)/2;
-y_angle = angle + (mouse_x - 300)/2;
+x_angle = 0;//(mouse_y - 300)/2;
+y_angle = angle; //+ (mouse_x - 300)/2;
 t_matrix = matrix_build(center[0], center[1] -translation, center[2], x_angle, -y_angle, 0, 1, 1, 1);
 t_model = [];
 for(m = 0; m < array_length_1d(new_model); m++) {

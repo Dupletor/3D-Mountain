@@ -51,5 +51,3 @@ for(var c=1;c<array_length_1d(polygons);c++) {
 file_text_close(file);
 
 insert("model.txt");
-show_debug_message(model);
-show_debug_message(model_h);

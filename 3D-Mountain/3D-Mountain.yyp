@@ -319,6 +319,14 @@
             }
         },
         {
+            "Key": "f7f08049-2d78-4c4f-909c-f6d7eac2692f",
+            "Value": {
+                "id": "3193822b-4905-485e-b90f-7f99ba7c1b45",
+                "resourcePath": "objects\\Hole_reversed\\Hole_reversed.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "fc8b5a80-f66b-48b6-8a76-0c60052ee1a6",
             "Value": {
                 "id": "f4472e3b-1231-42fd-b3c1-d16072f35360",
