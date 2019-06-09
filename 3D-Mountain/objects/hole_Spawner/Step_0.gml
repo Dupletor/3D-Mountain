@@ -1,6 +1,6 @@
 
-if(instance_place(x,y,Player)) {
-	with(instance_create_depth(x - inispd*510 + sprite_width/2, y + other.sprite_height/2 - 5, Player.depth-1, Hole)) {
+if(!Player.jumping && instance_place(x,y,Player)) {
+	with(instance_create_depth(x - inispd*510 + sprite_width/2, Player.y, Player.depth-1, Hole)) {
 		inispd = other.inispd;
 	}
 	instance_destroy();

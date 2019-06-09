@@ -1,4 +1,5 @@
 jumping = false;
+falling = false;
 going_right = false;
 going_left = false;
-on_top = false;
+angle = 0;

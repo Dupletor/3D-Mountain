@@ -5,12 +5,24 @@ depths = ds_grid_create(2,array_length_1d(t_model)/3);
 for(i = 0; i < array_length_1d(t_model); i+=3) {
 	var d = 0;
 	var triangle = [t_model[i],t_model[i+1],t_model[i+2]];
-	for(k = 0;k < 3; k++ ) {
-		dot = triangle[k];
-		d += (dot[2]) - sign(x_angle)*10000*new_model_h[i/3];
+	/*
+	var add = false;
+	
+	for(k = 0; k < 3; k++) {
+		var dot = triangle[k];
+		if(dot[2] > 0)
+			add = true;
 	}
-	ds_grid_set(depths, 0, i/3, i);
-	ds_grid_set(depths, 1, i/3, d);
+	
+	if(add) {
+	*/
+		for(k = 0;k < 3; k++ ) {
+			var dot = triangle[k];
+			d += (dot[2]) - sign(x_angle)*10000*new_model_h[i/3];
+		}
+		ds_grid_set(depths, 0, i/3, i);
+		ds_grid_set(depths, 1, i/3, d);
+	//}
 }
 
 ds_grid_sort(depths, 1, true);
