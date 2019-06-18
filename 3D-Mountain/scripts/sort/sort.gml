@@ -16,9 +16,10 @@ for(i = 0; i < array_length_1d(t_model); i+=3) {
 	
 	if(add) {
 	*/
+	//show_debug_message(x_angle);
 		for(k = 0;k < 3; k++ ) {
 			var dot = triangle[k];
-			d += (dot[2]) - sign(x_angle)*10000*new_model_h[i/3];
+			d += (dot[2]) - sign(x_angle)*10000000*new_model_h[i/3];
 		}
 		ds_grid_set(depths, 0, i/3, i);
 		ds_grid_set(depths, 1, i/3, d);

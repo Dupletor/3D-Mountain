@@ -2,14 +2,14 @@ angle = 0;
 translation = 0;
 global.player_in_position = false;
 
-colors = [c_red,c_blue,c_lime,c_yellow,c_orange, c_purple, c_aqua, c_olive];
-
-colors = [make_color_hsv(0,0,118),make_color_hsv(0,0,112),
+//colors = [c_red,c_blue,c_lime,c_yellow,c_orange, c_purple, c_aqua, c_olive];
+colors = [c_blue, c_blue, c_aqua, c_aqua];
+/*colors = [make_color_hsv(0,0,118),make_color_hsv(0,0,112),
 		  make_color_hsv(0,0,113),make_color_hsv(0,0,120),
 		  make_color_hsv(0,0,111),make_color_hsv(0,0,123),
 		  make_color_hsv(0,0,118),make_color_hsv(0,0,114),
 		  make_color_hsv(0,0,116),make_color_hsv(0,0,121),
-		  make_color_hsv(0,0,117),make_color_hsv(0,0,124)];
+		  make_color_hsv(0,0,117),make_color_hsv(0,0,124)];*/
 
 
 center = [x,y,0];
